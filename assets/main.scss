@@ -9,35 +9,28 @@ $spacing-lg: $spacing-base * 2;
 $spacing-xl: $spacing-base * 3;
 $border-radius: $spacing-sm;
 
-@mixin text-gradient($start, $end) {
-    @media screen {
-        background: $start;
-        background: linear-gradient(90deg, $start 20%, $end 100%);
-        background-size: 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; 
-        -moz-text-fill-color: transparent;
+@media (prefers-color-scheme: dark) {
+    .light-mode-only {
+        display: none;
     }
-
-    @media print {
-      background: $start;    
+}
+@media (prefers-color-scheme: light) {
+    .dark-mode-only {
+        display: none;
     }
 }
 
 html {
 
-    --accent-color: #0060a5;
     --link-color: #08c;
     --background-color: linear-gradient(#b0a0f5, #e7eef1);
     --text-color: rgba(0, 0, 0, 0.75);
 
-    // @media (prefers-color-scheme: dark) {
-    //     --accent-color: #0060a5;
-    //     --link-color: rgb(5, 177, 153);
-    //     --background-color: #000;
-    //     --text-color: rgba(255, 255, 255, 0.75);
-    // }
+    @media (prefers-color-scheme: dark) {
+        --link-color: rgb(5, 177, 153);
+        --background-color: #000;
+        --text-color: rgba(255, 255, 255, 0.75);
+    }
 
     ::selection {
         background: var(--link-color);
@@ -148,7 +141,6 @@ a {
 
 .hero {
     height: 450px;
-    overflow-x: hidden;
     > img {
         position: absolute;
         width: 220px;
@@ -181,6 +173,45 @@ a {
         transform: rotate(10deg);
         margin-left: 60px;
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        height: 300px;
+        > img {
+            position: absolute;
+            width: 150px;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    
+    .hero-left {
+        left: 50%;
+        margin-left: -75px;
+    
+        &.visible {
+            transform: rotate(-5deg);
+            margin-left: -170px;
+            margin-top: 10px;
+        }
+    }
+    
+    .hero-centre {
+        left: 50%;
+        margin-left: -75px; // Half the width
+        z-index: 1;
+    }
+    
+    .hero-right {
+        left: 50%;
+        margin-left: -75px;
+    
+        &.visible {
+            transform: rotate(5deg);
+            margin-left: 20px;
+            margin-top: 10px;
+        }
     }
 }
 

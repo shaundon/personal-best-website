@@ -4,13 +4,18 @@ description: "Get Personal Best for iPhone, your workout buddy."
 app_banner: id1510256676
 ---
 
-<div class="hero">
+<div class="hero light-mode-only">
     <img src="/assets/hero-left.png" class="hero-left">
     <img src="/assets/hero-centre.png" class="hero-centre">
     <img src="/assets/hero-right.png" class="hero-right">
 </div>
 
-<!-- <img src="/assets/personal-best-header.png" class="hero-image"> -->
+<div class="hero dark-mode-only">
+    <img src="/assets/hero-left-dark.png" class="hero-left">
+    <img src="/assets/hero-centre-dark.png" class="hero-centre">
+    <img src="/assets/hero-right-dark.png" class="hero-right">
+</div>
+
 <h1>Level up your workouts.</h1>
 
 <p>

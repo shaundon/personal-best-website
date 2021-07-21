@@ -1,6 +1,8 @@
 window.onload = function() {
-    const heroLeft = document.querySelector('.hero-left')
-    heroLeft && heroLeft.classList.add('visible')
-    const heroRight = document.querySelector('.hero-right')
-    heroRight && heroRight.classList.add('visible')
+    const heroes = document.querySelectorAll('.hero-left,.hero-right')
+    if (heroes && heroes.length > 0) {
+        heroes.forEach(function(hero) {
+            hero.classList.add('visible');
+        })
+    }
 }
