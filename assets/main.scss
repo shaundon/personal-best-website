@@ -1,0 +1,224 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$spacing-base: 15px;
+$spacing-xs: $spacing-base / 4;
+$spacing-sm: $spacing-base / 2;
+$spacing-lg: $spacing-base * 2;
+$spacing-xl: $spacing-base * 3;
+$border-radius: $spacing-sm;
+
+@mixin text-gradient($start, $end) {
+    @media screen {
+        background: $start;
+        background: linear-gradient(90deg, $start 20%, $end 100%);
+        background-size: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+    }
+
+    @media print {
+      background: $start;    
+    }
+}
+
+html {
+
+    --accent-color: #0060a5;
+    --link-color: #08c;
+    --background-color: linear-gradient(#b0a0f5, #e7eef1);
+    --text-color: rgba(0, 0, 0, 0.75);
+
+    // @media (prefers-color-scheme: dark) {
+    //     --accent-color: #0060a5;
+    //     --link-color: rgb(5, 177, 153);
+    //     --background-color: #000;
+    //     --text-color: rgba(255, 255, 255, 0.75);
+    // }
+
+    ::selection {
+        background: var(--link-color);
+        color: white;
+    }
+
+    font-size: 16px;
+    padding: $spacing-base;
+    min-height: 100vh;
+    line-height: 22px;
+
+    @media print {
+        font-size: 14px;
+    }
+}
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Arial",sans-serif;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+h1 {
+    display: flex;
+    font-size: 300%;
+    margin-bottom: $spacing-lg;
+    margin-top: $spacing-base;
+    line-height: $spacing-xl;
+}
+
+h2, h3, h4, h5, h6 {
+    display: flex;
+    margin-bottom: $spacing-base;
+    margin-top: $spacing-xl;
+
+    @media print {
+        margin-bottom: $spacing-sm;
+        margin-top: $spacing-lg;
+    }
+}
+
+h2 {
+    font-size: 200%;
+    line-height: $spacing-lg;
+}
+
+h2 + h3 {
+    margin-top: $spacing-lg;
+}
+
+.app-store-badge > img {
+    width: $spacing-xl * 4;
+
+    &:hover {
+        filter: brightness(75%);
+    }
+}
+
+.extra-features {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 48%;
+    margin-right: 2%;
+}
+
+.personal-best-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 120%;
+    color: var(--text-color);
+}
+
+.app-icon {
+    border-radius: 10px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $spacing-lg;
+}
+
+.header-link {
+    margin-left: $spacing-sm;
+    text-decoration: none;
+    color: var(--text-color);
+    &:hover {
+        filter: brightness(75%);
+    }
+}
+
+a {
+    color: var(--link-color);
+}
+
+.hero {
+    height: 450px;
+    overflow-x: hidden;
+    > img {
+        position: absolute;
+        width: 220px;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.hero-left {
+    left: 50%;
+    margin-left: -110px;
+
+    &.visible {
+        transform: rotate(-10deg);
+        margin-left: -280px;
+        margin-top: 10px;
+    }
+}
+
+.hero-centre {
+    left: 50%;
+    margin-left: -110px; // Half the width
+    z-index: 1;
+}
+
+.hero-right {
+    left: 50%;
+    margin-left: -110px;
+
+    &.visible {
+        transform: rotate(10deg);
+        margin-left: 60px;
+        margin-top: 10px;
+    }
+}
+
+.promo-screenshots {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__screenshot {
+        max-width: 250px;
+        border-radius: $border-radius;
+        box-shadow: 0 0 15px rgba(#000, .25);
+        margin: $spacing-sm;
+        min-width: 150px;
+        max-height: 500px;
+    }
+}
+
+.promo-artwork {
+    border-radius: $border-radius;
+    max-width: 100%;
+}
+
+.screen-reader-only {
+    position: absolute;
+    left: -5000px;
+    
+    &:focus {
+        background: #fff;
+        color: #000;
+        left: 0;
+        padding: $spacing-lg;
+    }
+}
+
+.large-screens-only {
+    @media screen and (max-width: 400px) {
+        display: none;
+    }
+}
