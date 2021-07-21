@@ -5,15 +5,15 @@ app_banner: id1510256676
 ---
 
 <div class="hero light-mode-only">
-    <img src="/assets/hero-left.png" class="hero-left">
-    <img src="/assets/hero-centre.png" class="hero-centre">
-    <img src="/assets/hero-right.png" class="hero-right">
+    <img src="/assets/hero-left.png" class="hero-left" alt="Screenshot of Personal Best">
+    <img src="/assets/hero-centre.png" class="hero-centre" alt="Screenshot of Personal Best">
+    <img src="/assets/hero-right.png" class="hero-right" alt="Screenshot of Personal Best">
 </div>
 
 <div class="hero dark-mode-only">
-    <img src="/assets/hero-left-dark.png" class="hero-left">
-    <img src="/assets/hero-centre-dark.png" class="hero-centre">
-    <img src="/assets/hero-right-dark.png" class="hero-right">
+    <img src="/assets/hero-left-dark.png" class="hero-left" alt="Screenshot of Personal Best">
+    <img src="/assets/hero-centre-dark.png" class="hero-centre" alt="Screenshot of Personal Best">
+    <img src="/assets/hero-right-dark.png" class="hero-right" alt="Screenshot of Personal Best">
 </div>
 
 <h1>Level up your workouts.</h1>
@@ -23,12 +23,14 @@ app_banner: id1510256676
 </p>
 
 <a class="app-store-badge light-mode-only" href="https://apps.apple.com/gb/app/personal-best-workouts/id1510256676">
-  <img src="/assets/download-on-the-app-store.svg">
+  <img src="/assets/download-on-the-app-store.svg" alt="Download Personal Best on the App Store" />
 </a>
 
 <a class="app-store-badge dark-mode-only" href="https://apps.apple.com/gb/app/personal-best-workouts/id1510256676">
-  <img src="/assets/download-on-the-app-store-dark.svg">
+  <img src="/assets/download-on-the-app-store-dark.svg" alt="Download Personal Best on the App Store" />
 </a>
+
+<img src="/assets/personal-best-app-clip-code.svg" class="app-clip-code" alt="Personal Best App Clip Code">
 
 <section>
     <h2>Insights and leaderboards</h2>

@@ -29,6 +29,7 @@ Personal Best doesn't record workouts itself, it leaves that to apps better spec
 * See leaderboards of your best workouts, and create your own custom leaderboards to rank your workouts however you want
 * Plenty of widgets
 * Siri and Shortcuts support
+* App Clip support
 * Turn your workouts into nice-looking custom images to share on social media
 * Privacy first – workouts stay on your iPhone and I don't sell your data. No account or signup is required either
 * Inexpensive one-time purchase to unlock Personal Best Pro
