@@ -22,8 +22,12 @@ app_banner: id1510256676
     Personal Best is your new workout buddy. Working with Apple Health, it brings your workouts to life with leaderboards, sharing, stats and more.
 </p>
 
-<a class="app-store-badge" href="https://apps.apple.com/gb/app/personal-best-workouts/id1510256676">
+<a class="app-store-badge light-mode-only" href="https://apps.apple.com/gb/app/personal-best-workouts/id1510256676">
   <img src="/assets/download-on-the-app-store.svg">
+</a>
+
+<a class="app-store-badge dark-mode-only" href="https://apps.apple.com/gb/app/personal-best-workouts/id1510256676">
+  <img src="/assets/download-on-the-app-store-dark.svg">
 </a>
 
 <section>
