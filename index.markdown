@@ -2,6 +2,7 @@
 layout: default
 description: "Get Personal Best for iPhone, your workout buddy."
 app_banner: id1510256676
+app_clip: uk.sdonnelly.personal-best-0.Clip
 ---
 
 <div class="hero light-mode-only">
@@ -30,7 +31,7 @@ app_banner: id1510256676
   <img src="/assets/download-on-the-app-store-dark.svg" alt="Download Personal Best on the App Store" />
 </a>
 
-<img src="/assets/personal-best-app-clip-code.svg" class="app-clip-code" alt="Personal Best App Clip Code">
+<!-- <img src="/assets/personal-best-app-clip-code.svg" class="app-clip-code" alt="Personal Best App Clip Code"> -->
 
 <section>
     <h2>Insights and leaderboards</h2>

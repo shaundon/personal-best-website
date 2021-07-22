@@ -4,6 +4,7 @@ title: 'Press kit'
 permalink: /press
 description: "Everything you need to cover Personal Best"
 app_banner: id1510256676
+app_clip: uk.sdonnelly.personal-best-0.Clip
 ---
 
 # Press kit
