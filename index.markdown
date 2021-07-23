@@ -63,32 +63,47 @@ app_clip: uk.sdonnelly.personal-best-0.Clip
 
 <section class="extra-features">
     <div class="feature">
-        <h3>Privacy first</h3>
+        <h3>
+        <span class="material-icons">lock</span>
+        Privacy first
+        </h3>
         <p>
             Your workouts remain on your phone and not in the hands of creepy tracking companies.
         </p>
     </div>
     <div class="feature">
-        <h3>Achievements</h3>
+        <h3>
+            <span class="material-icons">verified</span>
+            Achievements
+        </h3>
         <p>
             Earn badges for using Personal Best in new ways and doing new types of workouts.
         </p>
     </div>
     <div class="feature">
-        <h3>Siri and Shortcuts</h3>
+        <h3>
+            <span class="material-icons">mic</span>
+            Siri and Shortcuts
+        </h3>
         <p>
             Ask Siri for your latest workout data, and use your phone's
             Shortcuts app to make powerful workflows and automations using your workouts.
         </p>
     </div>
     <div class="feature">
-        <h3>Ad free</h3>
+        <h3>
+            <span class="material-icons">block</span>
+            Ad free
+        </h3>
         <p>
             Personal Best doesn't waste your attention or battery life with ads.
         </p>
     </div>
     <div class="feature">
-        <h3>Proudly indie</h3>
+        <h3>
+            <span class="material-icons">face</span>
+            Proudly indie
+        </h3>        
         <p>
             I'm a <a href="https://twitter.com/shauneba">real person</a>, not a faceless corporation. That means I can work on features that are useful for you, not what a board of directors demands.
         </p>

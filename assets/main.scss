@@ -108,6 +108,20 @@ h2 + h3 {
     margin-right: 2%;
 }
 
+.feature .material-icons {
+    margin-right: $spacing-base;
+}
+
+@media screen and (max-width: 600px) {
+    .extra-features {
+        flex-direction: column;
+    }
+    .feature {
+        width: 100%;
+        margin-right: unset;
+    }
+}
+
 .personal-best-logo {
     display: flex;
     align-items: center;
