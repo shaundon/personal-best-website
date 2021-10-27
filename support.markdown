@@ -49,6 +49,10 @@ Personal Best is only able to display splits when detailed distance data is avai
 
 There is no technical limitation to stop Strava from including the correct data. [I've asked them to fix it](https://twitter.com/PersonalBestiOS/status/1364229599048122375) – Feel free to do the same and maybe they'll change stance if enough people ask.
 
+## Privacy policy
+
+View Personal Best's [privacy policy](/privacy-policy).
+
 ## Contact me
 
 If you weren't able to find an answer to your query here, feel free to email me at [shaun@getpersonalbest.com](mailto:shaun@getpersonalbest.com).
