@@ -33,7 +33,7 @@ Personal Best doesn't record workouts itself, it leaves that to apps better spec
 * App Clip support
 * Turn your workouts into nice-looking custom images to share on social media
 * Privacy first – workouts stay on your iPhone and I don't sell your data. No account or signup is required either
-* Inexpensive one-time purchase to unlock Personal Best Pro
+* Inexpensive subscription to unlock Personal Best Pro
 
 [See more on Personal Best's product page &raquo;](/)
 
@@ -44,10 +44,6 @@ I’m [Shaun](https://twitter.com/shauneba), an indie iOS developer in London, U
 Since then, I’ve been hard at work improving it, adding widgets, notifications, custom leaderboards, sharing and loads more features. My goal is for Personal Best to be considered a best-in-class iOS app.
 
 [Read more about my foray into indie app development &raquo;](https://codakuma.com/2020-in-review/)
-
-## System requirements
-
-iOS 14.0 or higher on iPhone. Personal Best isn't available on iPad, Mac or Apple TV because they don’t support Apple Health
 
 ## Questions and enquiries
 
