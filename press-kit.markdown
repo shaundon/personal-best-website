@@ -53,54 +53,14 @@ iOS 14.0 or higher on iPhone. Personal Best isn't available on iPad, Mac or Appl
 
 I'm happy to make myself available to any journalists, bloggers or podcasters wishing to discuss Personal Best or independent iOS app development. Get in touch via [Twitter](https://twitter.com/shauneba) or [email](mailto:shaun@getpersonalbest.com) to schedule something.
 
-## Media
-
-[Download all media (.zip)](/assets/presskit.zip)
-
-### Screenshots
+## Screenshots
 
 <div class="promo-screenshots__wrapper">
-
-  <img src="/assets/press-kit/screenshots/light/main screen.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/main screen.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/insights - top.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/insights - top.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/insights - bottom.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/insights - bottom.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/share screen.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/share screen.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/workout details - top.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/workout details - top.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/workout details - bottom.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/workout details - bottom.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/energy burned statistics.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/energy burned statistics.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/leaderboard.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/leaderboard.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/new leaderboard.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/new leaderboard.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/workout day - all days.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/workout day - all days.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/workout day - one day.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/workout day - one day.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/workout route map.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/workout route map.PNG" class="promo-screenshots__screenshot">
-
-  <img src="/assets/press-kit/screenshots/light/app icon.PNG" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/dark/app icon.PNG" class="promo-screenshots__screenshot">
-
-
+  <img src="/assets/press-kit/screenshots/dashboard.png" class="promo-screenshots__screenshot">
+  <img src="/assets/press-kit/screenshots/workouts.png" class="promo-screenshots__screenshot">
+  <img src="/assets/press-kit/screenshots/workout.png" class="promo-screenshots__screenshot">
+  <img src="/assets/press-kit/screenshots/heart-rate.png" class="promo-screenshots__screenshot">
+  <img src="/assets/press-kit/screenshots/share.png" class="promo-screenshots__screenshot">
 </div>
 
 ### Promotional artwork
