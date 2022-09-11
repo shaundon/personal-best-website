@@ -58,7 +58,7 @@ I'm happy to make myself available to any journalists, bloggers or podcasters wi
   <img src="/assets/press-kit/screenshots/heart-rate.png" class="promo-screenshots__screenshot">
   <img src="/assets/press-kit/screenshots/share.png" class="promo-screenshots__screenshot">
   <img src="/assets/press-kit/screenshots/lock-screen-widgets.png" class="promo-screenshots__screenshot">
-  <img src="/assets/press-kit/screenshots/lock-screen-widget-cofig.png" class="promo-screenshots__screenshot">
+  <img src="/assets/press-kit/screenshots/lock-screen-widget-config.png" class="promo-screenshots__screenshot">
 </div>
 
 ### Promotional artwork
