@@ -55,4 +55,4 @@ View Personal Best's [privacy policy](/privacy-policy).
 
 ## Contact me
 
-If you weren't able to find an answer to your query here, feel free to email me at [shaun@getpersonalbest.com](mailto:shaun@getpersonalbest.com).
+If you weren't able to find an answer to your query here, feel free to email me at [shaun@getpersonalbest.com](mailto:shaun@getpersonalbest.com) or message me on Mastodon [@personalbest@indieapps.space](https://indieapps.space/@personalbest){: rel=me}.

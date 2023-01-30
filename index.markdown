@@ -105,7 +105,7 @@ app_clip: uk.sdonnelly.personal-best-0.Clip
             Proudly indie
         </h3>        
         <p>
-            I'm a <a href="https://twitter.com/shauneba">real person</a>, not a faceless corporation. That means I can work on features that are useful for you, not what a board of directors demands.
+            I'm a <a rel="me" href="https://mstdn.social/@shaundon">real person</a>, not a faceless corporation. That means I can work on features that are useful for you, not what a board of directors demands.
         </p>
     </div>
 </section>
