@@ -47,7 +47,13 @@ For example, if you give Strava write permissions in the Health app, and record 
 
 Personal Best is only able to display splits when detailed distance data is available in Apple Health for a workout. Workouts recorded using Apple Watch and some other apps include this data, but some apps – like Strava – do not.
 
-There is no technical limitation to stop Strava from including the correct data. [I've asked them to fix it](https://twitter.com/PersonalBestiOS/status/1364229599048122375) – Feel free to do the same and maybe they'll change stance if enough people ask.
+There is no technical limitation to stop Strava from including the correct data. [I've asked them to fix it](https://twitter.com/PersonalBestiOS/status/1364229599048122375) – feel free to do the same and maybe they'll change stance if enough people ask.
+
+## No route (location) data
+
+For Personal Best to display route data for a workout, the app that recorded the workout needs to add the route data to Apple Health. Many apps do this, but some – notably Garmin Connect – [do not](https://support.garmin.com/en-IN/?faq=lK5FPB9iPF5PXFkIpFlFPA).
+
+There is no technical limitation preventing Garmin from provide routes to Apple Health. [I've asked them to fix it](https://twitter.com/PersonalBestiOS/status/1679807324708282368) – feel free to do the same and maybe they'll change stance if enough people ask.
 
 ## Privacy policy
 
