@@ -7,7 +7,7 @@ description: "How to redeem a promo code on the App Store"
 
 ## Redeeming App Store promo codes
 
-1. On your phone, open the App Store, tab the _Apps_ tab, scroll to the bottom of the screen then press the _Redeem_ button.
+1. Open the App Store, go to the _Today_ tab, tap on your profile picture at the top right, then press the _Redee Gift Card or Code_ button.
 1. On the sheet that appears, press _Enter Code Manually_, then enter your promo code.
 1. If you don't already have Personal Best installed, it should start downloading.
 1. Open Personal Best, then on the _Settings_ tab, press the banner at the top of the screen advertising Personal Best Pro, then press the _Restore Purchases_ button. You should now have Personal Best Pro 🎉
