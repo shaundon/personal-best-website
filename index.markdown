@@ -1,8 +1,7 @@
 ---
 layout: default
-description: "Get Personal Best for iPhone, your workout buddy."
+description: "Plan, track, and relive your workouts with Personal Best for iPhone, iPad, and Apple Watch."
 app_banner: id1510256676
-app_clip: uk.sdonnelly.personal-best-0.Clip
 ---
 
 <section class="hero">

@@ -26,12 +26,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://getpersonalbest.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  shaundon
 
-# Default social share image (Open Graph / Twitter). Pages can override via
-# `image:` in their front matter.
-image: /assets/personal-best-header.png
 twitter:
   username: personalbestios
   card: summary_large_image
+
+# Default social share image (Open Graph / Twitter). Applied to every page via
+# Jekyll's defaults so jekyll-seo-tag picks it up reliably. Individual pages
+# can override by setting `image:` in their own front matter.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/personal-best-header.png
 
 # Build settings
 #theme: minima
