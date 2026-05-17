@@ -2,272 +2,548 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-$spacing-base: 15px;
-$spacing-xs: $spacing-base / 4;
-$spacing-sm: $spacing-base / 2;
-$spacing-lg: $spacing-base * 2;
-$spacing-xl: $spacing-base * 3;
-$border-radius: $spacing-sm;
+/* ---------- Inter, self-hosted ---------- */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/assets/fonts/InterVariable.woff2') format('woff2-variations'),
+         url('/assets/fonts/InterVariable.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/assets/fonts/InterVariable-Italic.woff2') format('woff2-variations'),
+         url('/assets/fonts/InterVariable-Italic.woff2') format('woff2');
+}
+
+/* ---------- Tokens ---------- */
+:root {
+    --bg: #ffffff;
+    --surface: #f5f5f7;
+    --surface-strong: #ebebef;
+    --ink: #0b0b0f;
+    --ink-soft: rgba(11, 11, 15, 0.66);
+    --ink-muted: rgba(11, 11, 15, 0.5);
+    --line: rgba(11, 11, 15, 0.1);
+    --accent: #3b3dec;
+    --accent-ink: #ffffff;
+    --on-image: #ffffff;
+    --on-image-soft: rgba(255, 255, 255, 0.82);
+
+    --header-bg: rgba(255, 255, 255, 0);
+    --header-bg-scrolled: rgba(255, 255, 255, 0.78);
+    --header-border-scrolled: rgba(11, 11, 15, 0.08);
+
+    --radius-card: 28px;
+    --radius-btn: 999px;
+    --radius-feature: 20px;
+
+    --shadow-card: 0 30px 60px -30px rgba(11, 11, 15, 0.35);
+
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+    --container: 1200px;
+    --gutter: 20px;
+}
 
 @media (prefers-color-scheme: dark) {
-    .light-mode-only {
-        display: none;
+    :root {
+        --bg: #0b0b0f;
+        --surface: #14141a;
+        --surface-strong: #1d1d25;
+        --ink: #f5f5f7;
+        --ink-soft: rgba(245, 245, 247, 0.72);
+        --ink-muted: rgba(245, 245, 247, 0.55);
+        --line: rgba(245, 245, 247, 0.12);
+        --accent: #8a8cff;
+        --accent-ink: #0b0b0f;
+
+        --header-bg: rgba(11, 11, 15, 0);
+        --header-bg-scrolled: rgba(11, 11, 15, 0.72);
+        --header-border-scrolled: rgba(245, 245, 247, 0.08);
+
+        --shadow-card: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
     }
 }
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; }
+
+@media (prefers-color-scheme: dark) {
+    .light-mode-only { display: none !important; }
+}
 @media (prefers-color-scheme: light) {
-    .dark-mode-only {
-        display: none;
-    }
+    .dark-mode-only { display: none !important; }
 }
 
 html {
-
-    --link-color: #5a00a6;
-    --background-color: linear-gradient(#b0a0f5, #e7eef1);
-    --text-color: rgba(0, 0, 0, 0.75);
-
-    @media (prefers-color-scheme: dark) {
-        --link-color: rgb(5, 177, 153);
-        --background-color: #000;
-        --text-color: rgba(255, 255, 255, 0.75);
-    }
-
-    ::selection {
-        background: var(--link-color);
-        color: white;
-    }
-
-    font-size: 16px;
-    padding: $spacing-base;
-    min-height: 100vh;
-    line-height: 22px;
-
-    @media print {
-        font-size: 14px;
-    }
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.55;
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
+
 body {
-    background: var(--background-color);
-    color: var(--text-color);
-    font-family: -apple-system,BlinkMacSystemFont,"Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Arial",sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    isolation: isolate;
 }
 
-main {
+/* Soft brand backdrop at the top of every page. The gradient fades into
+   transparent so longer pages don't need an end-cap — body bg shows through. */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(70% 60% at 30% 0%, rgba(138, 140, 255, 0.45) 0%, transparent 60%),
+        radial-gradient(60% 55% at 80% 10%, rgba(255, 107, 139, 0.28) 0%, transparent 65%),
+        linear-gradient(180deg, rgba(240, 238, 252, 0.55) 0%, transparent 80%);
+}
+
+@media (prefers-color-scheme: dark) {
+    body::before {
+        background:
+            radial-gradient(70% 60% at 30% 0%, rgba(138, 140, 255, 0.28) 0%, transparent 60%),
+            radial-gradient(60% 55% at 80% 10%, rgba(182, 33, 158, 0.22) 0%, transparent 65%),
+            linear-gradient(180deg, rgba(29, 29, 37, 0.55) 0%, transparent 80%);
+    }
+}
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Layout primitives ---------- */
+main { display: block; }
+
+.container {
+    width: 100%;
+    max-width: var(--container);
     margin: 0 auto;
-    max-width: 800px;
+    padding: 0 var(--gutter);
 }
 
-h1 {
-    display: flex;
-    font-size: 300%;
-    margin-bottom: $spacing-lg;
-    margin-top: $spacing-base;
-    line-height: $spacing-xl * 1.1;
+.section {
+    padding-block: clamp(48px, 8vw, 96px);
 }
 
-h2, h3, h4, h5, h6 {
-    display: flex;
-    margin-bottom: $spacing-base;
-    margin-top: $spacing-xl;
+.section--tight { padding-block: clamp(32px, 5vw, 56px); }
 
-    @media print {
-        margin-bottom: $spacing-sm;
-        margin-top: $spacing-lg;
-    }
+/* ---------- Typography ---------- */
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0 0 0.4em;
+    color: var(--ink);
 }
 
-h2 {
-    font-size: 200%;
-    line-height: $spacing-lg * 1.25;
+h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); letter-spacing: -0.035em; }
+h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); letter-spacing: -0.015em; }
+
+p { margin: 0 0 1em; color: var(--ink-soft); }
+p.lede { font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: var(--ink-soft); max-width: 60ch; }
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--on-image-soft);
+    margin-bottom: 1rem;
 }
 
-h2 + h3 {
-    margin-top: $spacing-lg;
-}
-
-.app-store-badge > img {
-    width: $spacing-xl * 4;
-
-    &:hover {
-        filter: brightness(75%);
-    }
-}
-
-.app-clip-code {
-    width: $spacing-xl * 4;
-}
-
-.extra-features {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.feature {
-    width: 48%;
-    margin-right: 2%;
-}
-
-.feature .material-icons {
-    margin-right: $spacing-base;
-}
-
-@media screen and (max-width: 600px) {
-    .extra-features {
-        flex-direction: column;
-    }
-    .feature {
-        width: 100%;
-        margin-right: unset;
-    }
-}
-
-.personal-best-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 120%;
-    color: var(--text-color);
-}
-
-.app-icon {
-    border-radius: 10px;
-    width: 50px;
-    margin-right: 10px;
-}
-
-.header {
+/* ---------- Site header ----------
+   Two states:
+   - Default: sits flush to the edges, no background, white text — it visually
+     belongs to the hero image.
+   - .is-scrolled: floats inset from the edges with a pill-shaped translucent
+     background, and switches to ink-colored text + dark CTA. */
+.site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: $spacing-lg;
+    gap: 16px;
+    padding: 24px clamp(28px, 5vw, 56px);
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition:
+        top 250ms ease,
+        left 250ms ease,
+        right 250ms ease,
+        padding 250ms ease,
+        background-color 250ms ease,
+        border-color 250ms ease,
+        border-radius 250ms ease,
+        color 250ms ease,
+        box-shadow 250ms ease;
 }
 
-.header-link {
-    margin-left: $spacing-sm;
+.site-header.is-scrolled {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    padding: 10px 14px 10px 16px;
+    background: var(--header-bg-scrolled);
+    border-color: var(--header-border-scrolled);
+    border-radius: 999px;
+    box-shadow: 0 14px 34px -16px rgba(11, 11, 15, 0.18);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+    backdrop-filter: saturate(180%) blur(18px);
+}
+
+.site-header__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    font-weight: 600;
+    font-size: 1rem;
     text-decoration: none;
-    color: var(--text-color);
-    &:hover {
-        filter: brightness(75%);
+}
+.site-header__brand:hover { text-decoration: none; }
+
+.site-header__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+}
+
+.site-header__wordmark { letter-spacing: -0.01em; }
+
+.site-header__nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.site-header__link {
+    color: inherit;
+    padding: 8px 12px;
+    border-radius: var(--radius-btn);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+.site-header__link:hover {
+    background: var(--surface);
+    text-decoration: none;
+}
+
+.site-header__cta {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 10px 18px;
+    border-radius: var(--radius-btn);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 200ms ease, color 200ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+.site-header__cta:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px -10px rgba(11, 11, 15, 0.35);
+}
+@media (max-width: 520px) {
+    .site-header__link { display: none; }
+    .site-header__cta { padding: 9px 14px; font-size: 0.9rem; }
+    .site-header.is-scrolled {
+        top: 8px;
+        left: 8px;
+        right: 8px;
     }
 }
 
-a {
-    color: var(--link-color);
-}
-
+/* ---------- Hero ----------
+   Three iPhones fan out from the centre on load; a soft radial gradient sits
+   behind them as the brand backdrop. Page bg shows through below. */
 .hero {
-    height: 450px;
-    > img {
-        position: absolute;
-        width: 220px;
-        transition: all 0.5s ease-in-out;
-    }
+    --phone-width: clamp(180px, 22vw, 240px);
+    --phone-fan: clamp(110px, 16vw, 180px);
+
+    position: relative;
+    padding: clamp(100px, 14vh, 140px) var(--gutter) clamp(48px, 8vw, 96px);
+    text-align: center;
+    overflow: hidden;
 }
 
-.hero-left {
+.hero__phones {
+    position: relative;
+    height: calc(var(--phone-width) * 2.05);
+    max-width: calc(var(--phone-width) + var(--phone-fan) * 2 + 40px);
+    margin: 0 auto clamp(28px, 4vw, 48px);
+}
+
+.hero__phone {
+    position: absolute;
+    top: 0;
     left: 50%;
-    margin-left: -110px;
-
-    &.visible {
-        transform: rotate(-10deg);
-        margin-left: -280px;
-        margin-top: 10px;
-    }
+    width: var(--phone-width);
+    margin-left: calc(var(--phone-width) / -2);
+    filter: drop-shadow(0 30px 40px rgba(11, 11, 15, 0.18));
 }
 
-.hero-centre {
-    left: 50%;
-    margin-left: -110px; // Half the width
-    z-index: 1;
+.hero__phone--centre { z-index: 2; }
+
+@keyframes hero-fan-left {
+    from { margin-left: calc(var(--phone-width) / -2); transform: rotate(0deg) translateY(0); }
+    to   { margin-left: calc(var(--phone-width) / -2 - var(--phone-fan)); transform: rotate(-9deg) translateY(8px); }
 }
 
-.hero-right {
-    left: 50%;
-    margin-left: -110px;
-
-    &.visible {
-        transform: rotate(10deg);
-        margin-left: 60px;
-        margin-top: 10px;
-    }
+@keyframes hero-fan-right {
+    from { margin-left: calc(var(--phone-width) / -2); transform: rotate(0deg) translateY(0); }
+    to   { margin-left: calc(var(--phone-width) / -2 + var(--phone-fan)); transform: rotate(9deg) translateY(8px); }
 }
 
-@media screen and (max-width: 600px) {
-    .hero {
-        height: 320px;
-        > img {
-            position: absolute;
-            width: 150px;
-            transition: all 0.5s ease-in-out;
-        }
-    }
-    
-    .hero-left {
-        left: 50%;
-        margin-left: -75px;
-    
-        &.visible {
-            transform: rotate(-5deg);
-            margin-left: -170px;
-            margin-top: 10px;
-        }
-    }
-    
-    .hero-centre {
-        left: 50%;
-        margin-left: -75px; // Half the width
-        z-index: 1;
-    }
-    
-    .hero-right {
-        left: 50%;
-        margin-left: -75px;
-    
-        &.visible {
-            transform: rotate(5deg);
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-    }
+.hero__phone--left {
+    animation: hero-fan-left 750ms cubic-bezier(0.22, 0.68, 0.28, 1) 250ms both;
 }
 
-.promo-screenshots {
-    &__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &__screenshot {
-        max-width: 250px;
-        border-radius: $border-radius;
-        box-shadow: 0 0 15px rgba(#000, .25);
-        margin: $spacing-sm;
-        min-width: 150px;
-        max-height: 500px;
-    }
+.hero__phone--right {
+    animation: hero-fan-right 750ms cubic-bezier(0.22, 0.68, 0.28, 1) 250ms both;
 }
 
+.hero__content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.hero__title {
+    max-width: 16ch;
+    margin: 1.5em auto 0.4em;
+}
+
+.hero__lede {
+    max-width: 52ch;
+    margin: 0 auto 2rem;
+}
+
+.hero__actions {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: var(--radius-btn);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    border: 1px solid transparent;
+    transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+
+.btn--primary {
+    background: var(--on-image);
+    color: #0b0b0f;
+}
+.btn--primary:hover { box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.45); }
+
+.btn--ghost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+}
+.btn--ghost:hover { background: var(--surface); }
+
+.btn--solid {
+    background: var(--ink);
+    color: var(--bg);
+}
+.btn--solid:hover { box-shadow: 0 12px 28px -8px rgba(11, 11, 15, 0.45); }
+
+/* ---------- Feature sections (editorial text blocks) ---------- */
+.features {
+    padding: clamp(40px, 7vw, 88px) clamp(20px, 5vw, 72px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(32px, 5vw, 56px);
+}
+
+.features__item {
+    max-width: 64ch;
+}
+.features__item h2 { margin: 0 0 0.4em; }
+.features__item p { font-size: clamp(1.05rem, 1.4vw, 1.15rem); margin: 0; }
+
+/* ---------- Feature grid (small extras) ---------- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.feature-card {
+    border-radius: var(--radius-feature);
+    padding: 24px;
+    border: 1px solid var(--line);
+}
+
+.feature-card__icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 14px;
+    color: var(--accent);
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 8px;
+}
+
+.feature-card p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ---------- CTA band ----------
+   Deep navy panel with a single soft coral glow in the top-right — pulls
+   from the On "Sustainability" card / coral swatches in the moodboard. */
+.cta-band {
+    margin-block: clamp(40px, 6vw, 80px);
+    border-radius: var(--radius-card);
+    padding: clamp(40px, 6vw, 72px);
+    text-align: center;
+    color: #ffffff;
+    background:
+        radial-gradient(65% 75% at 88% 12%, rgba(255, 138, 115, 0.32) 0%, transparent 65%),
+        #0c1230;
+    box-shadow: var(--shadow-card);
+}
+.cta-band h2 { color: var(--on-image); }
+.cta-band p { color: var(--on-image-soft); max-width: 52ch; margin: 0 auto 1.5em; }
+
+/* ---------- App store badge ---------- */
+.app-store-badge img {
+    height: 52px;
+    width: auto;
+    transition: filter 150ms ease;
+}
+.app-store-badge:hover img { filter: brightness(85%); }
+
+/* ---------- Press kit / generic content pages ---------- */
+.page {
+    padding: 120px var(--gutter) 80px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+.page h1 { margin-bottom: 0.5em; }
+.page h2 { margin-top: 1.6em; }
+.page h3 { margin-top: 1.4em; font-size: 1.2rem; }
+.page ul, .page ol { padding-left: 1.25em; }
+.page li { margin-bottom: 0.4em; color: var(--ink-soft); }
+
+.promo-screenshots__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+}
+.promo-screenshots__screenshot {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--shadow-card);
+}
 .promo-artwork {
-    border-radius: $border-radius;
-    max-width: 100%;
+    border-radius: var(--radius-feature);
+    width: 100%;
+    margin: 16px 0;
 }
 
+/* ---------- Footer ---------- */
+.site-footer {
+    border-top: 1px solid var(--line);
+    padding: 40px var(--gutter) 32px;
+    margin-top: 40px;
+}
+.site-footer__inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-footer__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+.site-footer__icon {
+    width: 40px; height: 40px; border-radius: 10px;
+}
+.site-footer__name { margin: 0; font-weight: 600; }
+.site-footer__tagline { margin: 0; color: var(--ink-muted); font-size: 0.9rem; }
+.site-footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+.site-footer__nav a { color: var(--ink-soft); font-size: 0.95rem; }
+.site-footer__nav a:hover { color: var(--ink); }
+.site-footer__small {
+    max-width: var(--container);
+    margin: 24px auto 0;
+    color: var(--ink-muted);
+    font-size: 0.85rem;
+}
+
+/* ---------- Accessibility ---------- */
 .screen-reader-only {
     position: absolute;
-    left: -5000px;
-    
-    &:focus {
-        background: #fff;
-        color: #000;
-        left: 0;
-        padding: $spacing-lg;
-    }
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+.screen-reader-only:focus {
+    position: static;
+    width: auto; height: auto;
+    clip: auto;
+    background: var(--bg);
+    color: var(--ink);
+    padding: 12px 16px;
 }
 
-.large-screens-only {
-    @media screen and (max-width: 400px) {
-        display: none;
-    }
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
 }

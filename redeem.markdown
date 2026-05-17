@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "Redeeming a promo code"
 permalink: /redeem
 description: "How to redeem a promo code on the App Store"

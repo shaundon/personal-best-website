@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "Privacy Policy"
 permalink: /privacy-policy
 description: "Personal Best's privacy policy"
