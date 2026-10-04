@@ -5,14 +5,15 @@ app_banner: id1510256676
 ---
 
 <section class="hero">
+  {% include duo-banner.html %}
   <div class="hero__phones light-mode-only" aria-hidden="true">
     <img class="hero__phone hero__phone--left" src="/assets/hero-left.png" alt="">
-    <img class="hero__phone hero__phone--centre" src="/assets/hero-centre.png" alt="">
+    <img class="hero__phone hero__phone--centre" src="/assets/hero-centre.webp" alt="">
     <img class="hero__phone hero__phone--right" src="/assets/hero-right.png" alt="">
   </div>
   <div class="hero__phones dark-mode-only" aria-hidden="true">
     <img class="hero__phone hero__phone--left" src="/assets/hero-left-dark.png" alt="">
-    <img class="hero__phone hero__phone--centre" src="/assets/hero-centre-dark.png" alt="">
+    <img class="hero__phone hero__phone--centre" src="/assets/hero-centre-dark.webp" alt="">
     <img class="hero__phone hero__phone--right" src="/assets/hero-right-dark.png" alt="">
   </div>
   <div class="hero__content">
@@ -34,7 +35,6 @@ app_banner: id1510256676
         <circle cx="12" cy="12" r="5"/>
         <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
       </svg>
-      <span class="eyebrow">Plan</span>
     </div>
     <div class="features__item-body">
       <h2>Plan ahead, hit your goals</h2>
@@ -48,7 +48,6 @@ app_banner: id1510256676
         <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/>
         <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/>
       </svg>
-      <span class="eyebrow">Connect</span>
     </div>
     <div class="features__item-body">
       <h2>Works with what you already use</h2>
@@ -61,7 +60,6 @@ app_banner: id1510256676
       <svg class="features__item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M3 17c2 0 2.2-6 4.2-6S9.4 17 11.4 17s2.2-10 4.2-10S17.8 11 19.8 11"/>
       </svg>
-      <span class="eyebrow">Replay</span>
     </div>
     <div class="features__item-body">
       <h2>Relive your workouts</h2>
@@ -76,7 +74,6 @@ app_banner: id1510256676
         <path d="M7 9l5-5 5 5"/>
         <path d="M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/>
       </svg>
-      <span class="eyebrow">Share</span>
     </div>
     <div class="features__item-body">
       <h2>Made to share</h2>

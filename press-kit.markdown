@@ -6,6 +6,8 @@ description: "Everything you need to cover Personal Best"
 app_banner: id1510256676
 ---
 
+{% include duo-banner.html %}
+
 # Press kit
 
 You're encouraged to use anything you find here in stories, reviews, blogs, videos, or any coverage about Personal Best.
@@ -63,4 +65,29 @@ I'm available to any journalists, bloggers or podcasters wishing to discuss Pers
   <img src="/assets/press-kit/screenshots/7.png" class="promo-screenshots__screenshot">
   <img src="/assets/press-kit/screenshots/8.png" class="promo-screenshots__screenshot">
   <img src="/assets/press-kit/screenshots/9.png" class="promo-screenshots__screenshot">
+</div>
+
+### iPhone Duo {#iphone-duo}
+
+<div class="promo-screenshots__wrapper">
+  <img src="/assets/press-kit/duo-screenshots/replay-closed.png" alt="Replay on iPhone Duo, closed" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/replay-portrait.png" alt="Replay on iPhone Duo, open in portrait" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/replay-landscape.png" alt="Replay on iPhone Duo, open in landscape" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/replay-seated.png" alt="Replay on iPhone Duo, seated" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/sharing-closed.png" alt="Sharing on iPhone Duo, closed" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/sharing-portrait.png" alt="Sharing on iPhone Duo, open in portrait" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/sharing-landscape.png" alt="Sharing on iPhone Duo, open in landscape" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/sharing-seated.png" alt="Sharing on iPhone Duo, seated" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/today-closed.png" alt="Today on iPhone Duo, closed" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/today-portrait.png" alt="Today on iPhone Duo, open in portrait" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/today-landscape.png" alt="Today on iPhone Duo, open in landscape" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/workouts-closed.png" alt="Workouts on iPhone Duo, closed" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/workouts-portrait.png" alt="Workouts on iPhone Duo, open in portrait" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/workouts-landscape.png" alt="Workouts on iPhone Duo, open in landscape" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/workout-details-closed.png" alt="Workout details on iPhone Duo, closed" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/workout-details-portrait.png" alt="Workout details on iPhone Duo, open in portrait" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/workout-details-landscape.png" alt="Workout details on iPhone Duo, open in landscape" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/statistics-closed.png" alt="Statistics on iPhone Duo, closed" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/statistics-portrait.png" alt="Statistics on iPhone Duo, open in portrait" loading="lazy">
+  <img src="/assets/press-kit/duo-screenshots/statistics-landscape.png" alt="Statistics on iPhone Duo, open in landscape" loading="lazy">
 </div>

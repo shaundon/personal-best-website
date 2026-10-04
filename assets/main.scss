@@ -155,7 +155,7 @@ main { display: block; }
 h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     line-height: 1.05;
     margin: 0 0 0.4em;
     color: var(--ink);
@@ -239,7 +239,7 @@ p.lede { font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: var(--ink-soft); max-
     border-radius: 8px;
 }
 
-.site-header__wordmark { letter-spacing: -0.01em; }
+.site-header__wordmark { letter-spacing: -0.01em; white-space: nowrap; }
 
 .site-header__nav {
     display: inline-flex;
@@ -273,14 +273,28 @@ p.lede { font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: var(--ink-soft); max-
     transform: translateY(-1px);
     box-shadow: 0 10px 24px -10px rgba(11, 11, 15, 0.35);
 }
+/* On phones the nav keeps both links but shortens them: "Press" and
+   "Download". */
+.site-header__short { display: none; }
+
 @media (max-width: 520px) {
-    .site-header__link { display: none; }
+    .site-header__long { display: none; }
+    .site-header__short { display: inline; }
+    .site-header { gap: 8px; }
+    .site-header__brand { gap: 8px; }
+    .site-header__nav { gap: 4px; }
+    .site-header__link { padding: 8px 10px; font-size: 0.9rem; }
     .site-header__cta { padding: 9px 14px; font-size: 0.9rem; }
     .site-header.is-scrolled {
         top: 8px;
         left: 8px;
         right: 8px;
     }
+}
+
+@media (max-width: 400px) {
+    .site-header__brand { font-size: 0.95rem; }
+    .site-header__cta { padding: 9px 12px; }
 }
 
 /* ---------- Hero ----------
@@ -422,11 +436,6 @@ p.lede { font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: var(--ink-soft); max-
     width: 36px;
     height: 36px;
     color: var(--accent);
-}
-
-.features__item-meta .eyebrow {
-    color: var(--ink-muted);
-    margin: 0;
 }
 
 .features__item-body h2 { margin: 0 0 0.4em; }
@@ -579,4 +588,233 @@ p.lede { font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: var(--ink-soft); max-
 
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; animation: none !important; }
+}
+
+/* ---------- iPhone Duo banner ----------
+   A pill on the home page and press kit pointing to /duo. The pastel
+   gradient matches the Duo page's screenshots. */
+.duo-banner {
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+    padding: 6px 6px 6px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-btn);
+    background: linear-gradient(120deg, rgba(247, 214, 230, 0.7), rgba(221, 213, 247, 0.7) 50%, rgba(207, 225, 248, 0.7));
+    color: var(--ink);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: left;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.duo-banner:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px -12px rgba(11, 11, 15, 0.35);
+}
+.duo-banner__cta {
+    flex: none;
+    padding: 5px 12px;
+    border-radius: var(--radius-btn);
+    background: var(--ink);
+    color: var(--bg);
+}
+@media (max-width: 480px) {
+    .duo-banner { gap: 8px; padding-left: 14px; font-size: 0.8rem; }
+    .duo-banner__cta { padding: 5px 10px; }
+}
+@media (max-width: 420px) {
+    .duo-banner { gap: 6px; padding-left: 12px; }
+    .duo-banner__cta { padding: 5px 8px; }
+}
+/* Wrapped in a block so Markdown pages leave its HTML alone. */
+.hero .duo-banner-wrap { margin-bottom: clamp(24px, 4vw, 40px); }
+.page .duo-banner-wrap { margin-bottom: 24px; }
+
+@media (prefers-color-scheme: dark) {
+    .duo-banner {
+        background: linear-gradient(120deg, rgba(120, 70, 110, 0.45), rgba(90, 80, 150, 0.45) 50%, rgba(60, 90, 140, 0.45));
+    }
+}
+
+/* ---------- iPhone Duo page ----------
+   Each screen section ends in a stack of pre-rendered device shots, one per
+   pose, sharing a grid cell; assets/duo.js fades between them. */
+.duo-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+.duo-hero .eyebrow,
+.duo-feature .eyebrow,
+.duo-press .eyebrow { color: var(--ink-muted); }
+.duo-hero .lede { margin-inline: auto; }
+.duo-hero .hero__actions { justify-content: center; }
+
+.duo-intro {
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+    padding-top: clamp(40px, 6vw, 72px);
+    text-align: center;
+}
+.duo-intro__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-card);
+}
+.duo-intro p {
+    max-width: 60ch;
+    margin: 0;
+    font-size: clamp(1.1rem, 1.9vw, 1.3rem);
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+}
+
+/* The same type as the intro, closing the page after the last screen. */
+.duo-outro { padding-top: clamp(64px, 9vw, 120px); }
+
+.duo-feature {
+    padding-top: clamp(56px, 9vw, 120px);
+    text-align: center;
+}
+.duo-feature h2 { margin: 0 0 0.4em; }
+.duo-feature p { max-width: 56ch; margin-inline: auto; }
+
+.duo-stage {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    margin: clamp(24px, 4vw, 40px) 0 0;
+}
+
+.duo-stage__shots {
+    --duo-shot-max-height: min(50vh, 560px);
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    max-width: 960px;
+}
+.duo-stage__shots > * {
+    grid-area: 1 / 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms ease, visibility 0s linear 250ms;
+}
+/* A fixed-height slot: each pose's canvas is a different shape, and this
+   keeps the page still as they swap. */
+.duo-stage__shots > img {
+    width: 100%;
+    height: min(var(--duo-shot-max-height), 80vw);
+    object-fit: contain;
+}
+.duo-stage__shots > .is-active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms ease, visibility 0s;
+}
+
+.duo-stage__placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: min(var(--duo-shot-max-height), 56vw);
+    border-radius: var(--radius-card);
+    background: linear-gradient(135deg, #f7d6e6 0%, #ddd5f7 50%, #cfe1f8 100%);
+    font-weight: 600;
+    color: rgba(11, 11, 15, 0.55);
+}
+
+/* Pose selector: a segmented control whose highlight slides to the chosen
+   pose (positioned by assets/duo.js). */
+.duo-poses {
+    position: relative;
+    display: inline-flex;
+    padding: 4px;
+    border-radius: var(--radius-btn);
+    background: var(--surface-strong);
+}
+.duo-poses__indicator {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 0;
+    border-radius: var(--radius-btn);
+    background: var(--bg);
+    box-shadow: 0 1px 2px rgba(11, 11, 15, 0.12), 0 4px 12px -4px rgba(11, 11, 15, 0.2);
+    transition: transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1), width 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.duo-poses__option {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 0;
+    border-radius: var(--radius-btn);
+    background: transparent;
+    color: var(--ink-muted);
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 150ms ease;
+}
+.duo-poses__option:hover,
+.duo-poses__option[aria-pressed="true"] { color: var(--ink); }
+.duo-poses__option:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.duo-poses__option svg { width: 18px; height: 18px; flex: none; }
+
+@media (max-width: 520px) {
+    .duo-poses__option {
+        flex-direction: column;
+        gap: 2px;
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+}
+
+/* The press card sits right under the intro: getting coverage is the
+   page's job, so it comes before the feature tour. */
+.duo-press-wrap {
+    padding-top: clamp(40px, 6vw, 64px);
+    scroll-margin-top: 96px;
+}
+.duo-press {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 48px);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-card);
+    background: var(--surface);
+    box-shadow: var(--shadow-card);
+}
+.duo-press h2 {
+    margin: 0 0 0.5em;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+.duo-press__items {
+    margin-top: 1.5em;
+    border-top: 1px solid var(--line);
+}
+.duo-press__item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+}
+.duo-press__item:last-child { border-bottom: 0; padding-bottom: 0; }
+.duo-press__item h3 {
+    margin: 0 0 0.3em;
+    font-size: 1.1rem;
+}
+.duo-press__body p { margin: 0; }
+.duo-press__body p + p { margin-top: 0.4em; }
+.duo-press__body a { font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+    .duo-stage__shots > *, .duo-stage__shots > .is-active, .duo-poses__indicator { transition: none; }
 }
