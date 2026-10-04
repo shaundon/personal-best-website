@@ -4,6 +4,7 @@ title: 'Personal Best for iPhone Duo'
 permalink: /duo
 description: "Check out Personal Best's extensive iPhone Duo support."
 app_banner: id1510256676
+image: /assets/duo/social.png
 ---
 
 <section class="duo-hero container">
