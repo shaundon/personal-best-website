@@ -2,7 +2,7 @@
 layout: default
 title: 'Personal Best for iPhone Duo'
 permalink: /duo
-description: "Check out Personal Best's extensive iPhone Duo support."
+description: "iPhone Duo + Personal Best. A match made in Cupertino."
 app_banner: id1510256676
 image: /assets/duo/social.jpg
 ---
