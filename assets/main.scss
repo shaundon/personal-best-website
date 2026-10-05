@@ -881,6 +881,8 @@ p.lede { font-size: clamp(1.05rem, 1.5vw, 1.25rem); color: var(--ink-soft); max-
 .duo-press__body p { margin: 0; }
 .duo-press__body p + p { margin-top: 0.4em; }
 .duo-press__body a { font-weight: 600; }
+/* Reused on the press kit for the demo mode card. */
+.page .duo-press { margin: 32px 0 0; }
 
 @media (prefers-reduced-motion: reduce) {
     .duo-stage__shots > *, .duo-stage__shots > .is-active, .duo-poses__indicator, .duo-demo-note { transition: none; }

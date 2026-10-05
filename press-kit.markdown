@@ -12,6 +12,12 @@ app_banner: id1510256676
 
 You're encouraged to use anything you find here in stories, reviews, blogs, videos, or any coverage about Personal Best.
 
+<div class="duo-press">
+  <h2>Try it with demo mode</h2>
+  <p>Personal Best uses your workout history, so it can look a bit sparse on a review device or if you don't have many workouts. Demo mode gives you pre-made, curated workouts with nice data.</p>
+  <p>To enter demo mode, go to <em>Settings > version number > Secret demo mode</em>. Or visit <a href="personalbest://demo">personalbest://demo</a> on a device with Personal Best installed.</p>
+</div>
+
 ## Links
 
 * [Personal Best on the App Store](https://apps.apple.com/gb/app/personal-best-workouts/id1510256676)
@@ -40,8 +46,11 @@ Leaderboards so you can track your progress. See your calorie burn compared to f
 ### 🌍 Works everywhere
 Personal Best works on iPhone, iPad, and Apple Watch. It comes with lots of widgets and complications for keeping score when the app isn't running.
 
-### 🫂 Respects users
+### 🫂 Respects you
 Minimal tracking. No ads. Good accessibility.
+
+### 📱 A good iOS citizen 
+Supports everything a good iOS app should do, like widgets, Siri, Spotlight, lots of App Intents, Shortcuts, resizability, dark mode, keyboard shortcuts... you get the idea. 
 
 ## What's the story behind it?
 
