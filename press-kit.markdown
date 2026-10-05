@@ -47,7 +47,7 @@ Leaderboards so you can track your progress. See your calorie burn compared to f
 Personal Best works on iPhone, iPad, and Apple Watch. It comes with lots of widgets and complications for keeping score when the app isn't running.
 
 ### 🫂 Respects you
-Minimal tracking. No ads. Good accessibility.
+[Minimal tracking](/privacy-policy). No ads. Good accessibility.
 
 ### 📱 A good iOS citizen 
 Supports everything a good iOS app should do, like widgets, Siri, Spotlight, lots of App Intents, Shortcuts, resizability, dark mode, keyboard shortcuts... you get the idea. 
