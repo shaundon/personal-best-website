@@ -11,8 +11,7 @@ image: /assets/duo/social.jpg
   <h1>Unfold your workouts</h1>
   <p class="lede">iPhone Duo + Personal Best. A match made in <strike>heaven</strike> Cupertino.</p>
   <div class="hero__actions">
-    <!-- TODO(shaun): add pt=<provider token> so App Analytics attributes the ct=duo-launch campaign -->
-    <a class="btn btn--solid" href="https://apps.apple.com/gb/app/personal-best-workouts/id1510256676?ct=duo-launch">Get the app</a>
+    <a class="btn btn--solid" href="https://apps.apple.com/app/apple-store/id1510256676?pt=638392&amp;ct=duo-launch&amp;mt=8">Get the app</a>
     <a class="btn btn--ghost" href="#press">For press</a>
   </div>
 </section>
@@ -151,7 +150,7 @@ image: /assets/duo/social.jpg
   <section class="cta-band">
     <h2>Make every workout count</h2>
     <p>Download for free on the App Store.</p>
-    <a class="btn btn--primary" href="https://apps.apple.com/gb/app/personal-best-workouts/id1510256676?ct=duo-launch">Get the app</a>
+    <a class="btn btn--primary" href="https://apps.apple.com/app/apple-store/id1510256676?pt=638392&amp;ct=duo-launch&amp;mt=8">Get the app</a>
   </section>
 </div>
 
