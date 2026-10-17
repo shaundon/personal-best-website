@@ -40,9 +40,9 @@ image: /assets/duo/social.jpg
     <p>I'm an indie developer working to build the best fitness app for iOS, and I'd be honoured if you'd consider sharing Personal Best with your audience.</p>
     <div class="duo-press__items">
       <div class="duo-press__item">
-        <h3>Get the beta</h3>
+        <h3>Get the app</h3>
         <div class="duo-press__body">
-          <p><a href="https://testflight.apple.com/join/tfESCDKB">Download Personal Best v21 from TestFlight</a></p>
+          <p><a href="https://apps.apple.com/gb/app/personal-best-workouts/id1510256676">Get Personal Best from the App Store &raquo;</a></p>
         </div>
       </div>
       <div class="duo-press__item">
